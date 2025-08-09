@@ -4,7 +4,7 @@ import React, { useCallback, useState } from 'react';
 import { Text, View } from 'react-native';
 import { useFocusEffect } from '@react-navigation/native';
 
-export default function MainScreen() {
+export default function BlogScreen() {
   const [refreshing, setRefreshing] = useState(false);
   const [focusKey, setFocusKey] = useState(0);
 
@@ -39,7 +39,7 @@ export default function MainScreen() {
           }}
         >
           <Text className='text-3xl font-bold text-center text-gray-800 dark:text-white'>
-            Main Page
+            Blog Page
           </Text>
         </MotiView>
       </View>
