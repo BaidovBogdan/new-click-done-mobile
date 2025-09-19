@@ -91,8 +91,10 @@ export default function LoginForm() {
       <TouchableOpacity
         accessibilityRole='button'
         onPress={handleContinuePress}
-        disabled={isLoading}
-        className={`mt-4 h-12 rounded-xl bg-[#FF564F] dark:bg-[#FF564F] items-center justify-center ${isLoading ? 'opacity-70' : ''}`}
+        disabled={isLoading || !email || !password}
+        className={`mt-4 h-12 rounded-xl bg-[#FF564F] dark:bg-[#FF564F] items-center justify-center ${
+          isLoading || !email || !password ? 'opacity-70' : ''
+        }`}
       >
         {isLoading ? (
           <ActivityIndicator color={'#FFFFFF'} />
